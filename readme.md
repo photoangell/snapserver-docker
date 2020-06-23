@@ -1,4 +1,5 @@
 a super small snapserver image based on Alpine linux
+
 clocks in at 11.5mb
 
 build with
@@ -11,4 +12,4 @@ copy the service file
 cp ~/snapserverdocker/docker.snapserver.service /etc/systemd/system/
 systemctl daemon-reload 
 dietpi-services restart docker.snapserver
-
+docker logs -f snapserver
