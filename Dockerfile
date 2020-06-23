@@ -1,4 +1,4 @@
-FROM alpine:latest
+FROM multiarch/alpine:latest
 RUN apk -U upgrade
 RUN apk add --no-cache snapcast-server
 COPY snapserver.conf /etc/snapserver.conf
