@@ -9,8 +9,8 @@ StartLimitInterval=30
 Restart=always
 ExecStartPre=-/usr/bin/docker stop snapserver
 ExecStartPre=-/usr/bin/docker rm snapserver
-ExecStartPre=/usr/bin/docker pull photoangell/snapserver:latest
-ExecStart=/usr/bin/docker run --rm -p 1704:1704 -p 1705:1705 -p 1780:1780 -v /tmp/snapfifo:/tmp/snapfifo -v /tmp/ttsfifo:/tmp/ttsfifo --name snapserver photoangell/snapserver
+#ExecStartPre=/usr/bin/docker pull photoangell/snapserver:latest
+ExecStart=/usr/bin/docker run --rm -p 1704:1704 -p 1705:1705 -p 1780:1780 -v /tmp/snapcast:/tmp/snapcast --name snapserver photoangell/snapserver
 
 [Install]
 WantedBy=multi-user.target
