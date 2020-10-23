@@ -1,6 +1,7 @@
 a super small snapserver image based on Alpine linux
 
 clocks in at 11.5mb
+edit - with snapweb, now 28.2mb
 
 build with
 docker build -t photoangell/snapserver .
@@ -13,3 +14,6 @@ cp ~/snapserverdocker/docker.snapserver.service /etc/systemd/system/
 systemctl daemon-reload 
 dietpi-services restart docker.snapserver
 docker logs -f snapserver
+
+access shell 
+docker exec -it snapserver sh
